@@ -15,7 +15,7 @@
 ## Запуск
 
 ```bash
-git clone <https://github.com/qravemzxc/speedtest>
+git clone https://github.com/qravemzxc/speedtest
 cd speedtest
 python speedtest.py <URL>
 ```
@@ -26,7 +26,10 @@ python speedtest.py <URL>
 python speedtest.py https://lh5.googleusercontent.com/brLL_Cjt27_7cecWGylb_WwZjSLNfGwDHjDaNoGTXuJsaqRFg-YQXarbxhNQexc-NxPPPSat7w04l1ShLNpTRzfJixtMg27MfPtK_ZGEFw9T-OHZFS-tR_RPk3xDvcNTUasTLLVXt2_MyJzZpM5L3OhTtyHv5Y_WgxaWnNa6aHB8VudH_yoGiQv3MagICq3bTJGUDg
 ```
 
-> Для замера лучше брать файлы, предназначенные для тестов скорости (как в примере выше).
+> В примере — картинка ~150 КБ. На таком маленьком файле большая часть времени уходит
+> на DNS, установку соединения и TLS, поэтому скорость получается заниженной.
+> Для более точного замера лучше брать файлы покрупнее, предназначенные для тестов скорости
+> (например, `https://proof.ovh.net/files/10Mb.dat`).
 > Некоторые сайты (например, Wikimedia) ограничивают частоту запросов и на 2–3 запросе
 > отвечают `429 Too Many Requests`.
 
@@ -42,24 +45,24 @@ python speedtest.py https://lh5.googleusercontent.com/brLL_Cjt27_7cecWGylb_WwZjS
 ## Пример вывода
 
 ```
-URL: https://proof.ovh.net/files/10Mb.dat
+URL: https://lh5.googleusercontent.com/brLL_Cjt27_7cecWGylb_WwZjSLNfGwDHjDaNoGTXuJsaqRFg-YQXarbxhNQexc-NxPPPSat7w04l1ShLNpTRzfJixtMg27MfPtK_ZGEFw9T-OHZFS-tR_RPk3xDvcNTUasTLLVXt2_MyJzZpM5L3OhTtyHv5Y_WgxaWnNa6aHB8VudH_yoGiQv3MagICq3bTJGUDg
 Запросов: 10
 
-[ 1/10]   10.00 МБ     1606.4 мс     52.22 Мбит/с
-[ 2/10]   10.00 МБ     1625.3 мс     51.61 Мбит/с
-[ 3/10]   10.00 МБ     1555.6 мс     53.93 Мбит/с
-[ 4/10]   10.00 МБ     1614.0 мс     51.97 Мбит/с
-[ 5/10]   10.00 МБ     1469.8 мс     57.07 Мбит/с
-[ 6/10]   10.00 МБ     1584.1 мс     52.95 Мбит/с
-[ 7/10]   10.00 МБ     1467.4 мс     57.17 Мбит/с
-[ 8/10]   10.00 МБ     1479.4 мс     56.70 Мбит/с
-[ 9/10]   10.00 МБ     1393.5 мс     60.20 Мбит/с
-[10/10]   10.00 МБ     1847.1 мс     45.42 Мбит/с
+[ 1/10]  150.80 КБ      924.4 мс      1.34 Мбит/с
+[ 2/10]  150.80 КБ      224.2 мс      5.51 Мбит/с
+[ 3/10]  150.80 КБ      228.7 мс      5.40 Мбит/с
+[ 4/10]  150.80 КБ      218.9 мс      5.64 Мбит/с
+[ 5/10]  150.80 КБ      228.6 мс      5.40 Мбит/с
+[ 6/10]  150.80 КБ      232.7 мс      5.31 Мбит/с
+[ 7/10]  150.80 КБ      209.5 мс      5.90 Мбит/с
+[ 8/10]  150.80 КБ      228.5 мс      5.41 Мбит/с
+[ 9/10]  150.80 КБ      230.8 мс      5.35 Мбит/с
+[10/10]  150.80 КБ      199.9 мс      6.18 Мбит/с
 
 Итого:
-  Среднее время запроса:  1564.3 мс
-  Общий объём данных:     100.00 МБ (104857600 байт)
-  Скорость скачивания:    53.63 Мбит/с (6.70 МБ/с)
+  Среднее время запроса:  292.6 мс
+  Общий объём данных:     1.47 МБ (1544160 байт)
+  Скорость скачивания:    4.22 Мбит/с (0.53 МБ/с)
 ```
 
 ## Единицы измерения
